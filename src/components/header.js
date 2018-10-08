@@ -38,7 +38,11 @@ class Header extends React.Component {
           <Text style={styles.title}>{ this.props.header }</Text>
         </View>
         <View style={styles.column2}>
-          <Image style={styles.iconImage} source={require('../../assets/icons/menu-dot.png')}></Image>
+          <View style={{ flexDirection: 'row' }}>
+            <Image style={styles.iconImage} source={require('../../assets/icons/message.png')}></Image>
+            <Image style={styles.iconImage} source={require('../../assets/icons/alert.png')}></Image>
+            <Image style={styles.iconImage} source={require('../../assets/icons/menu-dot.png')}></Image>
+          </View>
         </View>
       </View>
     );
@@ -71,8 +75,9 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
   },
   iconImage: {
-    width: 15,
-    height: 15,
+    width: 20,
+    height: 20,
+    margin: 5
   }
 });
 

@@ -106,12 +106,12 @@ class GeneralMenu extends React.Component {
               {
                 menuList.map((item, i) => 
                   <TouchableOpacity key={i} onPress={ () => this.handleClick(item)} style={ styles.listItem }>
-                      <Text style={{ flex:1, fontSize: 24, color: '#ffffff'}}>{item.name}</Text>
+                      <Text style={{ fontSize: 24, color: '#ffffff'}}>{item.name}</Text>
                   </TouchableOpacity>
                 )
               }
               <TouchableOpacity onPress={this.signOut} style={ styles.listItem }>
-                  <Text style={{ flex:1, fontSize: 24, color: '#ffffff'}}>Sign Out</Text>
+                  <Text style={{ fontSize: 24, color: '#ffffff'}}>Sign Out</Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -146,9 +146,10 @@ const styles = StyleSheet.create({
     marginBottom: 40,
   },
   listItem: {
-      flex: 1,
-      alignItems: 'center',
-      justifyContent: 'center',
+    paddingTop: 15,
+    paddingBottom: 15,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
 

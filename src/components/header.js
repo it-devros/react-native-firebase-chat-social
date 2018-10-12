@@ -39,8 +39,11 @@ class Header extends React.Component {
         </View>
         <View style={styles.column2}>
           <View style={{ flexDirection: 'row' }}>
-            <Image style={styles.iconImage} source={require('../../assets/icons/message.png')}></Image>
-            <Image style={styles.iconImage} source={require('../../assets/icons/alert.png')}></Image>
+            {
+              this.props.mode == 'overview' ?
+                <Image style={styles.iconImage} source={require('../../assets/icons/edit.png')}></Image>
+              : null
+            }
             <Image style={styles.iconImage} source={require('../../assets/icons/menu-dot.png')}></Image>
           </View>
         </View>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, ActivityIndicator, StyleSheet, Dimensions } from 'react-native';
+import { View, Text, Image, StyleSheet, Dimensions } from 'react-native';
 
 const {height,width} = Dimensions.get('window');
 
@@ -8,8 +8,8 @@ export default class Loading extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.mask}>
-          <Text>{this.props.label}...</Text>
-          <ActivityIndicator size="large" />
+          <Image style={styles.iconImage} source={require('../../assets/icons/loading.gif')}></Image>
+          <Text style={styles.title}>{this.props.label}...</Text>
         </View>
       </View>
     )
@@ -26,6 +26,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  title: {
+    fontSize: 20,
+    alignItems: 'center'
+  },
   mask: {
+    alignItems: 'center'
+  },
+  iconImage: {
+    width: 100,
+    height: 100
   }
 })

@@ -51,91 +51,91 @@ class ContactList extends React.Component {
               <Text style={styles.itemText}>
                 April
               </Text>
-              <Image style={styles.chatImage} source={require('../../../assets/icons/chat.png')}></Image>
+              <Image style={styles.chatImage} source={require('../../../assets/icons/call.png')}></Image>
             </TouchableOpacity>
             <TouchableOpacity style={styles.item} onPress={ this.onPressItem }>
               <Image style={styles.avatarImage} source={require('../../../assets/avatars/avatar2.jpg')}></Image>
               <Text style={styles.itemText}>
                 Assassin
               </Text>
-              <Image style={styles.chatImage} source={require('../../../assets/icons/chat.png')}></Image>
+              <Image style={styles.chatImage} source={require('../../../assets/icons/call.png')}></Image>
             </TouchableOpacity>
             <TouchableOpacity style={styles.item} onPress={ this.onPressItem }>
               <Image style={styles.avatarImage} source={require('../../../assets/avatars/avatar3.jpg')}></Image>
               <Text style={styles.itemText}>
                 Julia
               </Text>
-              <Image style={styles.chatImage} source={require('../../../assets/icons/chat.png')}></Image>
+              <Image style={styles.chatImage} source={require('../../../assets/icons/call.png')}></Image>
             </TouchableOpacity>
             <TouchableOpacity style={styles.item} onPress={ this.onPressItem }>
               <Image style={styles.avatarImage} source={require('../../../assets/avatars/avatar4.jpg')}></Image>
               <Text style={styles.itemText}>
                 Jang
               </Text>
-              <Image style={styles.chatImage} source={require('../../../assets/icons/chat.png')}></Image>
+              <Image style={styles.chatImage} source={require('../../../assets/icons/call.png')}></Image>
             </TouchableOpacity>
             <TouchableOpacity style={styles.item} onPress={ this.onPressItem }>
               <Image style={styles.avatarImage} source={require('../../../assets/avatars/avatar5.jpg')}></Image>
               <Text style={styles.itemText}>
                 Xung
               </Text>
-              <Image style={styles.chatImage} source={require('../../../assets/icons/chat.png')}></Image>
+              <Image style={styles.chatImage} source={require('../../../assets/icons/call.png')}></Image>
             </TouchableOpacity>
             <TouchableOpacity style={styles.item} onPress={ this.onPressItem }>
               <Image style={styles.avatarImage} source={require('../../../assets/avatars/avatar6.jpg')}></Image>
               <Text style={styles.itemText}>
                 Li
               </Text>
-              <Image style={styles.chatImage} source={require('../../../assets/icons/chat.png')}></Image>
+              <Image style={styles.chatImage} source={require('../../../assets/icons/call.png')}></Image>
             </TouchableOpacity>
             <TouchableOpacity style={styles.item} onPress={ this.onPressItem }>
               <Image style={styles.avatarImage} source={require('../../../assets/avatars/avatar7.jpg')}></Image>
               <Text style={styles.itemText}>
                 So Yon
               </Text>
-              <Image style={styles.chatImage} source={require('../../../assets/icons/chat.png')}></Image>
+              <Image style={styles.chatImage} source={require('../../../assets/icons/call.png')}></Image>
             </TouchableOpacity>
             <TouchableOpacity style={styles.item} onPress={ this.onPressItem }>
               <Image style={styles.avatarImage} source={require('../../../assets/avatars/avatar8.jpg')}></Image>
               <Text style={styles.itemText}>
                 Ryu
               </Text>
-              <Image style={styles.chatImage} source={require('../../../assets/icons/chat.png')}></Image>
+              <Image style={styles.chatImage} source={require('../../../assets/icons/call.png')}></Image>
             </TouchableOpacity>
             <TouchableOpacity style={styles.item} onPress={ this.onPressItem }>
               <Image style={styles.avatarImage} source={require('../../../assets/avatars/avatar9.jpg')}></Image>
               <Text style={styles.itemText}>
                 Kim
               </Text>
-              <Image style={styles.chatImage} source={require('../../../assets/icons/chat.png')}></Image>
+              <Image style={styles.chatImage} source={require('../../../assets/icons/call.png')}></Image>
             </TouchableOpacity>
             <TouchableOpacity style={styles.item} onPress={ this.onPressItem }>
               <Image style={styles.avatarImage} source={require('../../../assets/avatars/avatar10.jpg')}></Image>
               <Text style={styles.itemText}>
                 Pak
               </Text>
-              <Image style={styles.chatImage} source={require('../../../assets/icons/chat.png')}></Image>
+              <Image style={styles.chatImage} source={require('../../../assets/icons/call.png')}></Image>
             </TouchableOpacity>
             <TouchableOpacity style={styles.item} onPress={ this.onPressItem }>
               <Image style={styles.avatarImage} source={require('../../../assets/avatars/avatar11.jpg')}></Image>
               <Text style={styles.itemText}>
                 Ju
               </Text>
-              <Image style={styles.chatImage} source={require('../../../assets/icons/chat.png')}></Image>
+              <Image style={styles.chatImage} source={require('../../../assets/icons/call.png')}></Image>
             </TouchableOpacity>
             <TouchableOpacity style={styles.item} onPress={ this.onPressItem }>
               <Image style={styles.avatarImage} source={require('../../../assets/avatars/avatar12.png')}></Image>
               <Text style={styles.itemText}>
                 Xin
               </Text>
-              <Image style={styles.chatImage} source={require('../../../assets/icons/chat.png')}></Image>
+              <Image style={styles.chatImage} source={require('../../../assets/icons/call.png')}></Image>
             </TouchableOpacity>
             <TouchableOpacity style={styles.item} onPress={ this.onPressItem }>
               <Image style={styles.avatarImage} source={require('../../../assets/avatars/avatar13.png')}></Image>
               <Text style={styles.itemText}>
                 Song
               </Text>
-              <Image style={styles.chatImage} source={require('../../../assets/icons/chat.png')}></Image>
+              <Image style={styles.chatImage} source={require('../../../assets/icons/call.png')}></Image>
             </TouchableOpacity>
           </ScrollView>
         </View>

@@ -18,6 +18,8 @@ import ChatWindow from './src/components/contact/chat';
 
 import ProfileOverview from './src/components/profile/overview';
 
+import SettingsOverview from './src/components/settings/overview';
+
 
 const AuthStack = StackNavigator({
   Login: { screen: Login },
@@ -46,6 +48,12 @@ const ProfileStack = StackNavigator({
   headerMode: 'none',
 });
 
+const SettingStack = StackNavigator({
+  SettingsOverview: { screen: SettingsOverview }
+}, {
+  headerMode: 'none'
+});
+
 const MenuStack = StackNavigator({
   Menu: { screen: GeneralMenu }
 }, {
@@ -58,7 +66,8 @@ const AppNavigator = StackNavigator({
   MenuStack: { screen: MenuStack },
   DashboardStack: { screen: DashboardStack },
   ContactStack: { screen: ContactStack },
-  ProfileStack: { screen: ProfileStack }
+  ProfileStack: { screen: ProfileStack },
+  SettingStack: { screen: SettingStack }
 }, {
     mode: 'modal',
     headerMode: 'none',

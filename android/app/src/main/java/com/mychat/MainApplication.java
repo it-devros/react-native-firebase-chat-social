@@ -3,6 +3,7 @@ package com.mychat;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.github.wuxudong.rncharts.MPAndroidChartPackage;
 import com.horcrux.svg.SvgPackage;
 import com.facebook.reactnative.androidsdk.FBSDKPackage;
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
@@ -22,6 +23,7 @@ import io.invertase.firebase.auth.RNFirebaseAuthPackage;
 import io.invertase.firebase.firestore.RNFirebaseFirestorePackage; 
 import io.invertase.firebase.database.RNFirebaseDatabasePackage;
 
+
 public class MainApplication extends Application implements ReactApplication {
 
   // private static CallbackManager mCallbackManager = CallbackManager.Factory.create();
@@ -40,7 +42,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new SvgPackage(),
+          new MPAndroidChartPackage(),
+          new SvgPackage(),
           // new FBSDKPackage(mCallbackManager),
 
           new SplashScreenReactPackage(),

@@ -1,4 +1,6 @@
 rootProject.name = 'MyChat'
+include ':@merryjs_react-native-charts'
+project(':@merryjs_react-native-charts').projectDir = new File(rootProject.projectDir, '../node_modules/@merryjs/react-native-charts/android')
 include ':react-native-svg'
 project(':react-native-svg').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-svg/android')
 include ':react-native-fbsdk'

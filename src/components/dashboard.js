@@ -4,7 +4,7 @@ import { Button } from 'react-native-elements';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
-import { BarChart, Grid, XAxis } from 'react-native-svg-charts'
+import { BarChart, Grid, XAxis } from 'react-native-svg-charts';
 
 import Footer from './footer';
 import Header from './header';

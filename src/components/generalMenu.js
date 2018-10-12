@@ -18,7 +18,7 @@ const menuList = [
     params: {}
   },
   {
-    name: 'Activity',
+    name: 'Activities',
     component: 'ActivityStack',
     params: {}
   },

@@ -115,23 +115,23 @@ class ProfileOverview extends React.Component {
               </View>
               <View style={{ flex: 3, justifyContent: 'center' }}>
                 <View style={{ flexDirection: 'row' , paddingBottom: 5, paddingLeft: 15, alignItems: 'center' }}>
-                  <Text style={{ fontSize: 16, color: '#429321', marginRight: 10 }}>A</Text>
+                  <Text style={{ fontSize: 16, color: 'rgb(134, 65, 244)', marginRight: 10 }}>A</Text>
                   <Text style={{ fontSize: 16, color: '#00e0ff' }}>Strength</Text>
                 </View>
                 <View style={{ flexDirection: 'row' , paddingBottom: 5, paddingLeft: 15, alignItems: 'center' }}>
-                  <Text style={{ fontSize: 16, color: '#429321', marginRight: 10 }}>B</Text>
+                  <Text style={{ fontSize: 16, color: 'rgb(134, 65, 244)', marginRight: 10 }}>B</Text>
                   <Text style={{ fontSize: 16, color: '#00e0ff' }}>Intelligence</Text>
                 </View>
                 <View style={{ flexDirection: 'row' , paddingBottom: 5, paddingLeft: 15, alignItems: 'center' }}>
-                  <Text style={{ fontSize: 16, color: '#429321', marginRight: 10 }}>C</Text>
+                  <Text style={{ fontSize: 16, color: 'rgb(134, 65, 244)', marginRight: 10 }}>C</Text>
                   <Text style={{ fontSize: 16, color: '#00e0ff' }}>Ability</Text>
                 </View>
                 <View style={{ flexDirection: 'row' , paddingBottom: 5, paddingLeft: 15, alignItems: 'center' }}>
-                  <Text style={{ fontSize: 16, color: '#429321', marginRight: 10 }}>D</Text>
+                  <Text style={{ fontSize: 16, color: 'rgb(134, 65, 244)', marginRight: 10 }}>D</Text>
                   <Text style={{ fontSize: 16, color: '#00e0ff' }}>Emotion</Text>
                 </View>
                 <View style={{ flexDirection: 'row' , paddingBottom: 5, paddingLeft: 15, alignItems: 'center' }}>
-                  <Text style={{ fontSize: 16, color: '#429321', marginRight: 10 }}>E</Text>
+                  <Text style={{ fontSize: 16, color: 'rgb(134, 65, 244)', marginRight: 10 }}>E</Text>
                   <Text style={{ fontSize: 16, color: '#00e0ff' }}>Angry</Text>
                 </View>
                 <View style={{ flexDirection: 'row' , paddingBottom: 5, paddingLeft: 15, alignItems: 'center' }}>
@@ -172,13 +172,11 @@ const styles = StyleSheet.create({
   },
   itemRow: {
     padding: 5,
-    // marginBottom: 5,
     flexDirection: 'row',
   },
   item: {
     flex: 1,
     padding: 5,
-    marginBottom: 10,
     flexDirection: 'row',
   },
   label: {

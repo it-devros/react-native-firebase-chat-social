@@ -2,7 +2,6 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { StackNavigator } from 'react-navigation';
-import { View } from 'react-native';
 
 
 import Login from './src/components/auth/login';
@@ -19,6 +18,8 @@ import ChatWindow from './src/components/contact/chat';
 import ProfileOverview from './src/components/profile/overview';
 
 import SettingsOverview from './src/components/settings/overview';
+
+import ActivityList from './src/components/activity/activityList';
 
 
 const AuthStack = StackNavigator({
@@ -54,6 +55,12 @@ const SettingStack = StackNavigator({
   headerMode: 'none'
 });
 
+const ActivityStack = StackNavigator({
+  ActivityList: { screen: ActivityList }
+}, {
+  headerMode: 'none'
+});
+
 const MenuStack = StackNavigator({
   Menu: { screen: GeneralMenu }
 }, {
@@ -67,7 +74,8 @@ const AppNavigator = StackNavigator({
   DashboardStack: { screen: DashboardStack },
   ContactStack: { screen: ContactStack },
   ProfileStack: { screen: ProfileStack },
-  SettingStack: { screen: SettingStack }
+  SettingStack: { screen: SettingStack },
+  ActivityStack: { screen: ActivityStack }
 }, {
     mode: 'modal',
     headerMode: 'none',

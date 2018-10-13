@@ -20,6 +20,7 @@ import ProfileOverview from './src/components/profile/overview';
 import SettingsOverview from './src/components/settings/overview';
 
 import ActivityList from './src/components/activity/activityList';
+import Activity from './src/components/activity/activity';
 
 
 const AuthStack = StackNavigator({
@@ -56,7 +57,8 @@ const SettingStack = StackNavigator({
 });
 
 const ActivityStack = StackNavigator({
-  ActivityList: { screen: ActivityList }
+  ActivityList: { screen: ActivityList },
+  Activity: { screen: Activity }
 }, {
   headerMode: 'none'
 });

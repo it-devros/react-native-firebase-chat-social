@@ -74,10 +74,13 @@ class ActivityList extends React.Component {
                 <Image style={styles.avatarImage} source={require('../../../assets/avatars/avatar1.png')}></Image>
                 <View style={styles.headerText}>
                   <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                    <Text style={styles.name}>Xia Qing</Text>
+                    <Text style={styles.name}>He Jing</Text>
                     <Text style={styles.status}>Posted an Action</Text>
                   </View>
-                  <Text style={styles.time}>10 mins ago</Text>
+                  <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                    <Text style={styles.time}>10 mins ago</Text>
+                    <Text style={styles.followers}>64 following</Text>
+                  </View>
                 </View>
                 <Image style={styles.menuImage} source={require('../../../assets/icons/menu-dot.png')}></Image>
               </View>
@@ -94,7 +97,7 @@ class ActivityList extends React.Component {
                 {
                   this.state.item1 == true ?
                     <View>
-                      <View style={{ alignItems: 'center', marginBottom: 10 }}>
+                      <View style={{ alignItems: 'center', marginBottom: 5 }}>
                         <Image style={styles.bodyImage} source={require('../../../assets/images/temp.jpg')}></Image>
                       </View>
                       <Text style={styles.description}>
@@ -105,6 +108,21 @@ class ActivityList extends React.Component {
                   : null
                 }
               </View>
+              <View style={styles.itemFooter}>
+                <View style={{ flexDirection: 'row', flex: 1, alignItems: 'center' }}>
+                  <Image style={styles.starImage} source={require('../../../assets/icons/star-fill-y.png')}></Image>
+                  <Image style={styles.starImage} source={require('../../../assets/icons/star-fill-y.png')}></Image>
+                  <Image style={styles.starImage} source={require('../../../assets/icons/star-fill-y.png')}></Image>
+                  <Image style={styles.starImage} source={require('../../../assets/icons/star-outline-y.png')}></Image>
+                  <Image style={styles.starImage} source={require('../../../assets/icons/star-outline-y.png')}></Image>
+                </View>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('Activity')}>
+                  <Text style={styles.moreView}>
+                    View More{' '}
+                    <Image style={styles.moreViewImage} source={require('../../../assets/icons/next.png')}></Image>
+                  </Text>
+                </TouchableOpacity>
+              </View>
             </View>
 
             <View style={styles.item}>
@@ -112,10 +130,13 @@ class ActivityList extends React.Component {
                 <Image style={styles.avatarImage} source={require('../../../assets/avatars/avatar13.png')}></Image>
                 <View style={styles.headerText}>
                   <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                    <Text style={styles.name}>Xia Qing</Text>
+                    <Text style={styles.name}>He Jing</Text>
                     <Text style={styles.status}>Posted an Action</Text>
                   </View>
-                  <Text style={styles.time}>10 mins ago</Text>
+                  <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                    <Text style={styles.time}>10 mins ago</Text>
+                    <Text style={styles.followers}>64 following</Text>
+                  </View>
                 </View>
                 <Image style={styles.menuImage} source={require('../../../assets/icons/menu-dot.png')}></Image>
               </View>
@@ -132,16 +153,31 @@ class ActivityList extends React.Component {
                 {
                   this.state.item2 == true ?
                     <View>
-                      <View style={{ alignItems: 'center', marginBottom: 10 }}>
+                      <View style={{ alignItems: 'center', marginBottom: 5 }}>
                         <Image style={styles.bodyImage} source={require('../../../assets/images/temp.jpg')}></Image>
                       </View>
                       <Text style={styles.description}>
                         In coming summer vocation, I have to go to Malaysia. But I don't have Boy Friend.
                         So I am looking for one here.
-                      </Text>     
+                      </Text>
                     </View>
                   : null
                 }
+              </View>
+              <View style={styles.itemFooter}>
+                <View style={{ flexDirection: 'row', flex: 1, alignItems: 'center' }}>
+                  <Image style={styles.starImage} source={require('../../../assets/icons/star-fill-y.png')}></Image>
+                  <Image style={styles.starImage} source={require('../../../assets/icons/star-fill-y.png')}></Image>
+                  <Image style={styles.starImage} source={require('../../../assets/icons/star-fill-y.png')}></Image>
+                  <Image style={styles.starImage} source={require('../../../assets/icons/star-fill-y.png')}></Image>
+                  <Image style={styles.starImage} source={require('../../../assets/icons/star-fill-y.png')}></Image>
+                </View>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('Activity')}>
+                  <Text style={styles.moreView}>
+                    View More{' '}
+                    <Image style={styles.moreViewImage} source={require('../../../assets/icons/next.png')}></Image>
+                  </Text>
+                </TouchableOpacity>
               </View>
             </View>
 
@@ -150,10 +186,13 @@ class ActivityList extends React.Component {
                 <Image style={styles.avatarImage} source={require('../../../assets/avatars/avatar12.png')}></Image>
                 <View style={styles.headerText}>
                   <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                    <Text style={styles.name}>Xia Qing</Text>
+                    <Text style={styles.name}>He Jing</Text>
                     <Text style={styles.status}>Posted an Action</Text>
                   </View>
-                  <Text style={styles.time}>10 mins ago</Text>
+                  <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                    <Text style={styles.time}>10 mins ago</Text>
+                    <Text style={styles.followers}>64 following</Text>
+                  </View>
                 </View>
                 <Image style={styles.menuImage} source={require('../../../assets/icons/menu-dot.png')}></Image>
               </View>
@@ -170,7 +209,7 @@ class ActivityList extends React.Component {
                 {
                   this.state.item3 == true ?
                     <View>
-                      <View style={{ alignItems: 'center', marginBottom: 10 }}>
+                      <View style={{ alignItems: 'center', marginBottom: 5 }}>
                         <Image style={styles.bodyImage} source={require('../../../assets/images/temp.jpg')}></Image>
                       </View>
                       <Text style={styles.description}>
@@ -180,6 +219,21 @@ class ActivityList extends React.Component {
                     </View>
                   : null
                 }
+              </View>
+              <View style={styles.itemFooter}>
+                <View style={{ flexDirection: 'row', flex: 1, alignItems: 'center' }}>
+                  <Image style={styles.starImage} source={require('../../../assets/icons/star-fill-y.png')}></Image>
+                  <Image style={styles.starImage} source={require('../../../assets/icons/star-fill-y.png')}></Image>
+                  <Image style={styles.starImage} source={require('../../../assets/icons/star-fill-y.png')}></Image>
+                  <Image style={styles.starImage} source={require('../../../assets/icons/star-fill-y.png')}></Image>
+                  <Image style={styles.starImage} source={require('../../../assets/icons/star-outline-y.png')}></Image>
+                </View>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('Activity')}>
+                  <Text style={styles.moreView}>
+                    View More{' '}
+                    <Image style={styles.moreViewImage} source={require('../../../assets/icons/next.png')}></Image>
+                  </Text>
+                </TouchableOpacity>
               </View>
             </View>
 
@@ -208,9 +262,9 @@ const styles = StyleSheet.create({
   },
   item: {
     padding: 10,
-    backgroundColor: '#f8ac59',
+    backgroundColor: '#00d0ff',
     borderWidth: 1,
-    borderColor: '#f8ac59',
+    borderColor: '#00d0ff',
     borderRadius: 5,
     margin: 10
   },
@@ -230,22 +284,29 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
   },
   name: {
+    flex: 1,
     color: '#fff',
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: 'bold',
     marginRight: 10,
   },
   status: {
     color: '#fff',
-    fontSize: 14,
+    fontSize: 12,
   },
   time: {
+    flex: 1,
+    fontSize: 12,
+    color: '#fff'
+  },
+  followers: {
     fontSize: 12,
     color: '#fff'
   },
   menuImage: {
-    width: 20,
-    height: 20
+    width: 18,
+    height: 18,
+    marginLeft: 10,
   },
   itemBody: {
 
@@ -253,17 +314,17 @@ const styles = StyleSheet.create({
   title: {
     flex: 1,
     color: '#fff',
-    fontSize: 20,
+    fontSize: 16,
     fontWeight: 'bold',
-    marginBottom: 10,
-    marginTop: 10,
-    marginRight: 10,
+    marginBottom: 5,
+    marginTop: 5,
+    marginRight: 5,
   },
   directionImage: {
-    width: 20,
-    height: 20,
-    marginBottom: 10,
-    marginTop: 10,
+    width: 16,
+    height: 16,
+    marginBottom: 5,
+    marginTop: 5,
   },
   bodyImage: {
     width: 300,
@@ -273,7 +334,24 @@ const styles = StyleSheet.create({
   },
   description: {
     color: '#fff',
+    fontSize: 14,
+  },
+  itemFooter: {
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  moreView: {
+    color: '#fff',
     fontSize: 16,
+  },
+  moreViewImage: {
+    width: 16,
+    height: 16
+  },
+  starImage: {
+    width: 16,
+    height: 16,
+    margin: 2
   }
 });
 

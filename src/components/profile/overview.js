@@ -45,7 +45,7 @@ class ProfileOverview extends React.Component {
         data: {
           $set: {
             dataSets: [{
-              values: [{value: 10}, {value: 10}, {value: 10}, {value: 10}, {value: 10}],
+              values: [{value: 8}, {value: 10}, {value: 7}, {value: 10}, {value: 9}],
               label: 'DS 1',
               config: {
                 color: processColor('rgb(134, 65, 244)'),

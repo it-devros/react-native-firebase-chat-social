@@ -23,6 +23,9 @@ import ActivityList from './src/components/activity/activityList';
 import Activity from './src/components/activity/activity';
 
 
+import TrustOverview from './src/components/trust/overview';
+
+
 const AuthStack = StackNavigator({
   Login: { screen: Login },
   SignUp: { screen: SignUp },
@@ -63,6 +66,13 @@ const ActivityStack = StackNavigator({
   headerMode: 'none'
 });
 
+
+const TrustStack = StackNavigator({
+  TrustOverview: { screen: TrustOverview }
+}, {
+  headerMode: 'none'
+});
+
 const MenuStack = StackNavigator({
   Menu: { screen: GeneralMenu }
 }, {
@@ -77,7 +87,8 @@ const AppNavigator = StackNavigator({
   ContactStack: { screen: ContactStack },
   ProfileStack: { screen: ProfileStack },
   SettingStack: { screen: SettingStack },
-  ActivityStack: { screen: ActivityStack }
+  ActivityStack: { screen: ActivityStack },
+  TrustStack: { screen: TrustStack }
 }, {
     mode: 'modal',
     headerMode: 'none',

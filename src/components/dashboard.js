@@ -36,8 +36,17 @@ class Dashboard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      data: [ 50, 10, 40, 95, -4, -24, 85, 91, 35, 53, -53, 24, 50, -20, -80, 50, 10, 40, 95, -4, -24, 85, 91, 35, 53, -53, 24, 50, -20, -80 ]
     }
+    this.onScrollEvent = this.onScrollEvent.bind(this);
+  }
+
+  onScrollEvent() {
+    let temp = [];
+    for (let i = 0; i < 30; i += 1) {
+      temp.push(Math.random() % 100);
+    }
+    this.setState({ data: temp });
   }
 
 
@@ -50,7 +59,7 @@ class Dashboard extends React.Component {
     }
 
     const fill = 'rgb(134, 65, 244)';
-    const data = [ 50, 10, 40, 95, -4, -24, 85, 91, 35, 53, -53, 24, 50, -20, -80 ];
+    const data =  this.state.data;
 
     return (
 
@@ -119,21 +128,27 @@ class Dashboard extends React.Component {
                 </AnimatedCircularProgress>
               </View>
             </View>
-            <View style={{ flex: 3, padding: 5 }}>
-              <BarChart
-                style={{ height: '90%' }}
-                data={ data }
-                svg={{ fill }}
-                contentInset={{ top: 30, bottom: 30 }}>
-                <Grid />
-              </BarChart>
-              <XAxis
-                style={{  }}
-                data={ data }
-                formatLabel={ (value, index) => index }
-                contentInset={{ left: 10, right: 10 }}
-                svg={{ fontSize: 10, fill: 'black' }}
-                />
+            {/* <View style={{ flex: 3 }}>
+              <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{ width: width, height: '100%' }}>
+                <BarChart
+                  style={{ height: '100%', width: width * 2 }}
+                  data={ data }
+                  svg={{ fill }}
+                  contentInset={{ top: 30, bottom: 30 }}>
+                  <Grid />
+                </BarChart>
+              </ScrollView>
+            </View> */}
+            <View style={{ flex: 3, padding: 5, alignItems: 'center', justifyContent: 'center' }}>
+              <ScrollView onScroll={({nativeEvent}) => this.onScrollEvent(nativeEvent)} horizontal={true} showsHorizontalScrollIndicator={false} style={{ width: width - 10, height: '100%' }}>
+                <BarChart
+                  style={{ height: '95%', width: width * 2 }}
+                  data={ data }
+                  svg={{ fill }}
+                  contentInset={{ top: 30, bottom: 30 }}>
+                  <Grid />
+                </BarChart>
+              </ScrollView>
             </View>
           </View>
         </View>

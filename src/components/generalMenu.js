@@ -1,15 +1,15 @@
-import React from 'react';
-import { StyleSheet, Text, View, ImageBackground, TextInput, Image, TouchableOpacity, Dimensions, TouchableWithoutFeedback, Keyboard } from 'react-native';
-import { Button } from 'react-native-elements';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
+import React from 'react'
+import { StyleSheet, Text, View, ImageBackground, TextInput, Image, TouchableOpacity, Dimensions, TouchableWithoutFeedback, Keyboard } from 'react-native'
+import { Button } from 'react-native-elements'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
 
-import Footer from './footer';
-import Loading from './loading';
-import * as commonActions from '../actions/common';
-import * as userActions from '../actions/user';
+import Footer from './footer'
+import Loading from './loading'
+import * as commonActions from '../actions/common'
+import * as userActions from '../actions/user'
 
-const { height, width } = Dimensions.get('window');
+const { height, width } = Dimensions.get('window')
 
 const menuList = [
   {
@@ -42,52 +42,52 @@ const menuList = [
     component: 'SettingStack',
     params: {}
   }
-];
+]
 
 const mapDispatchToProps = (dispatch) => {
-	return ({
+  return ({
     userActions: bindActionCreators({...userActions}, dispatch),
     commonActions: bindActionCreators({...commonActions}, dispatch)
-	});
+  })
 }
 
 const mapStateToProps = (state) => {
-	return ({
+  return ({
     authedUser: state.user.authedUser,
     loading: state.common.loading,
     label: state.common.label,
-	});
+  })
 }
 
 
 
 class GeneralMenu extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
 
     }
 
-    this.handleClick = this.handleClick.bind(this);
-    this.signOut = this.signOut.bind(this);
+    this.handleClick = this.handleClick.bind(this)
+    this.signOut = this.signOut.bind(this)
   }
 
   handleClick(item) {
-    this.props.navigation.navigate(item.component, item.params);
+    this.props.navigation.navigate(item.component, item.params)
   }
 
   signOut() {
-    this.props.commonActions.start('Sign Out');
+    this.props.commonActions.start('Sign Out')
     this.props.userActions.signOut().then(res => {
-      this.props.navigation.navigate('AuthStack');
+      this.props.navigation.navigate('AuthStack')
       setTimeout(() => {
-        this.props.commonActions.end();
-      }, 500);
+        this.props.commonActions.end()
+      }, 500)
     }).catch(err => {
       setTimeout(() => {
-        this.props.commonActions.end();
-      }, 500);
-    });
+        this.props.commonActions.end()
+      }, 500)
+    })
   }
 
   render() {
@@ -95,7 +95,7 @@ class GeneralMenu extends React.Component {
     if (this.props.loading) {
       return (
         <Loading label={this.props.label} />
-      );
+      )
     }
 
     return (
@@ -123,7 +123,7 @@ class GeneralMenu extends React.Component {
           </View>
         </View>
       </ImageBackground>
-    );
+    )
 
   }
 
@@ -151,8 +151,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+})
 
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(GeneralMenu);
+export default connect(mapStateToProps, mapDispatchToProps)(GeneralMenu)

@@ -1,7 +1,7 @@
-import React from 'react';
-import { View, Text, Image, StyleSheet, Dimensions } from 'react-native';
+import React from 'react'
+import { View, Text, Image, StyleSheet, Dimensions } from 'react-native'
 
-const {height,width} = Dimensions.get('window');
+const {height,width} = Dimensions.get('window')
 
 export default class Loading extends React.Component {
   render() {

@@ -1,39 +1,39 @@
-import React from 'react';
-import { StyleSheet, Text, View, ImageBackground, TextInput, Image, TouchableOpacity, Dimensions, TouchableWithoutFeedback, Keyboard } from 'react-native';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
+import React from 'react'
+import { StyleSheet, Text, View, ImageBackground, TextInput, Image, TouchableOpacity, Dimensions, TouchableWithoutFeedback, Keyboard } from 'react-native'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
 
-import Loading from '../loading';
-import * as commonActions from '../../actions/common';
-import * as userActions from '../../actions/user';
+import Loading from '../loading'
+import * as commonActions from '../../actions/common'
+import * as userActions from '../../actions/user'
 
-const { height, width } = Dimensions.get('window');
+const { height, width } = Dimensions.get('window')
 
 
 const mapDispatchToProps = (dispatch) => {
-	return ({
+  return ({
     userActions: bindActionCreators({...userActions}, dispatch),
     commonActions: bindActionCreators({...commonActions}, dispatch)
-	});
+  })
 }
 
 const mapStateToProps = (state) => {
-	return ({
+  return ({
     authedUser: state.user.authedUser,
     loading: state.common.loading,
     label: state.common.label,
-	});
+  })
 }
 
 class WelcomeNew extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
-    this.pressHome = this.pressHome.bind(this);
+    this.pressHome = this.pressHome.bind(this)
   }
 
   pressHome() {
-    this.props.navigation.navigate('DashboardStack');
+    this.props.navigation.navigate('DashboardStack')
   }
 
   render() {
@@ -51,7 +51,7 @@ class WelcomeNew extends React.Component {
           </TouchableOpacity>
         </View>
       </ImageBackground>
-    );
+    )
 
   }
 
@@ -90,8 +90,8 @@ const styles = StyleSheet.create({
     width: 20,
     height: 20
   }
-});
+})
 
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(WelcomeNew);
+export default connect(mapStateToProps, mapDispatchToProps)(WelcomeNew)

@@ -1,30 +1,30 @@
-import React from 'react';
-import { StyleSheet, Text, View, ImageBackground, TextInput, Image, TouchableOpacity, Dimensions, TouchableWithoutFeedback, Keyboard, ScrollView, processColor } from 'react-native';
-import { Button } from 'react-native-elements';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import { RadarChart } from '@merryjs/react-native-charts';
-import update from 'immutability-helper';
+import React from 'react'
+import { StyleSheet, Text, View, ImageBackground, TextInput, Image, TouchableOpacity, Dimensions, TouchableWithoutFeedback, Keyboard, ScrollView, processColor } from 'react-native'
+import { Button } from 'react-native-elements'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import { RadarChart } from '@merryjs/react-native-charts'
+import update from 'immutability-helper'
 
-import Footer from '../footer';
-import Header from '../header';
+import Footer from '../footer'
+import Header from '../header'
 
-const { height, width } = Dimensions.get('window');
+const { height, width } = Dimensions.get('window')
 
 
 const mapDispatchToProps = (dispatch) => {
-	return ({
-	});
+  return ({
+  })
 }
 
 const mapStateToProps = (state) => {
-	return ({
-	});
+  return ({
+  })
 }
 
 class ProfileOverview extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       data: {},
       legend: {
@@ -36,7 +36,7 @@ class ProfileOverview extends React.Component {
       }
     }
 
-    this.handleSelect = this.handleSelect.bind(this);
+    this.handleSelect = this.handleSelect.bind(this)
   }
 
   componentDidMount() {
@@ -63,7 +63,7 @@ class ProfileOverview extends React.Component {
           }
         }
       })
-    );
+    )
   }
 
   handleSelect(event) {
@@ -155,7 +155,7 @@ class ProfileOverview extends React.Component {
 
       </View>
 
-    );
+    )
 
   }
 
@@ -202,8 +202,8 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%'
   }
-});
+})
 
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProfileOverview);
+export default connect(mapStateToProps, mapDispatchToProps)(ProfileOverview)

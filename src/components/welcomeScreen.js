@@ -1,55 +1,55 @@
-import React from 'react';
-import { StyleSheet, Text, View, ImageBackground, TextInput, Image, TouchableOpacity, Dimensions, TouchableWithoutFeedback, Keyboard } from 'react-native';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
+import React from 'react'
+import { StyleSheet, Text, View, ImageBackground, TextInput, Image, TouchableOpacity, Dimensions, TouchableWithoutFeedback, Keyboard } from 'react-native'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
 
-import Loading from './loading';
-import * as commonActions from '../actions/common';
-import * as userActions from '../actions/user';
+import Loading from './loading'
+import * as commonActions from '../actions/common'
+import * as userActions from '../actions/user'
 
-const { height, width } = Dimensions.get('window');
+const { height, width } = Dimensions.get('window')
 
 
 const mapDispatchToProps = (dispatch) => {
-	return ({
+  return ({
     userActions: bindActionCreators({...userActions}, dispatch),
     commonActions: bindActionCreators({...commonActions}, dispatch)
-	});
+  })
 }
 
 const mapStateToProps = (state) => {
-	return ({
+  return ({
     loading: state.common.loading,
     label: state.common.label,
-	});
+  })
 }
 
 class WelcomeScreen extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
-    this.pressSignIn = this.pressSignIn.bind(this);
+    this.pressSignIn = this.pressSignIn.bind(this)
   }
 
   componentWillMount() {
-    this.props.commonActions.start('Preparing Data');
+    this.props.commonActions.start('Preparing Data')
     this.props.userActions.checkAuthed().then(res => {
       if (res == true) {
-        this.props.navigation.navigate('DashboardStack');
+        this.props.navigation.navigate('DashboardStack')
       }
       setTimeout(() => {
-        this.props.commonActions.end();
-      }, 500);
+        this.props.commonActions.end()
+      }, 500)
     }).catch(err => {
       setTimeout(() => {
-        this.props.commonActions.end();
-      }, 500);
-      throw err;
-    });
+        this.props.commonActions.end()
+      }, 500)
+      throw err
+    })
   }
 
   pressSignIn() {
-    this.props.navigation.navigate('AuthStack');
+    this.props.navigation.navigate('AuthStack')
   }
 
   render() {
@@ -57,7 +57,7 @@ class WelcomeScreen extends React.Component {
     if (this.props.loading) {
       return (
         <Loading label={this.props.label} />
-      );
+      )
     }
 
     return(
@@ -73,7 +73,7 @@ class WelcomeScreen extends React.Component {
           </TouchableOpacity>
         </View>
       </ImageBackground>
-    );
+    )
 
   }
 
@@ -111,8 +111,8 @@ const styles = StyleSheet.create({
     width: 20,
     height: 20
   }
-});
+})
 
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(WelcomeScreen);
+export default connect(mapStateToProps, mapDispatchToProps)(WelcomeScreen)

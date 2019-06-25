@@ -1,57 +1,57 @@
-import React from 'react';
-import { StyleSheet, Text, View, ImageBackground, TextInput, Image, TouchableOpacity, Dimensions, TouchableWithoutFeedback, Keyboard, ScrollView } from 'react-native';
-import { Button } from 'react-native-elements';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
+import React from 'react'
+import { StyleSheet, Text, View, ImageBackground, TextInput, Image, TouchableOpacity, Dimensions, TouchableWithoutFeedback, Keyboard, ScrollView } from 'react-native'
+import { Button } from 'react-native-elements'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
 
-import Footer from '../footer';
-import Header from '../header';
+import Footer from '../footer'
+import Header from '../header'
 
-const { height, width } = Dimensions.get('window');
+const { height, width } = Dimensions.get('window')
 
 
 const mapDispatchToProps = (dispatch) => {
-	return ({
-	});
+  return ({
+  })
 }
 
 const mapStateToProps = (state) => {
-	return ({
-	});
+  return ({
+  })
 }
 
 class ActivityList extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       item1: false,
       item2: false,
       item3: false,
     }
 
-    this.clickTitle = this.clickTitle.bind(this);
+    this.clickTitle = this.clickTitle.bind(this)
   }
 
   clickTitle(val) {
     if (val == 1) {
       if (this.state.item1 == false) {
-        this.setState({ item1: true });
+        this.setState({ item1: true })
       } else {
-        this.setState({ item1: false });
+        this.setState({ item1: false })
       }
     }
     if (val == 2) {
       if (this.state.item2 == false) {
-        this.setState({ item2: true });
+        this.setState({ item2: true })
       } else {
-        this.setState({ item2: false });
+        this.setState({ item2: false })
       }
     }
     if (val == 3) {
       if (this.state.item3 == false) {
-        this.setState({ item3: true });
+        this.setState({ item3: true })
       } else {
-        this.setState({ item3: false });
+        this.setState({ item3: false })
       }
     }
   }
@@ -249,7 +249,7 @@ class ActivityList extends React.Component {
 
       </View>
 
-    );
+    )
 
   }
 
@@ -353,8 +353,8 @@ const styles = StyleSheet.create({
     height: 16,
     margin: 2
   }
-});
+})
 
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(ActivityList);
+export default connect(mapStateToProps, mapDispatchToProps)(ActivityList)

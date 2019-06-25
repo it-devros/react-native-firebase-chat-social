@@ -1,52 +1,52 @@
-import React from 'react';
-import { StyleSheet, Text, View, ImageBackground, TextInput, Image, TouchableOpacity, Dimensions, TouchableWithoutFeedback, Keyboard, ScrollView } from 'react-native';
-import { Button } from 'react-native-elements';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import { AnimatedCircularProgress } from 'react-native-circular-progress';
-import { BarChart, Grid, XAxis } from 'react-native-svg-charts';
+import React from 'react'
+import { StyleSheet, Text, View, ImageBackground, TextInput, Image, TouchableOpacity, Dimensions, TouchableWithoutFeedback, Keyboard, ScrollView } from 'react-native'
+import { Button } from 'react-native-elements'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import { AnimatedCircularProgress } from 'react-native-circular-progress'
+import { BarChart, Grid, XAxis } from 'react-native-svg-charts'
 
-import Footer from './footer';
-import Header from './header';
-import Loading from './loading';
-import * as commonActions from '../actions/common';
-import * as userActions from '../actions/user';
+import Footer from './footer'
+import Header from './header'
+import Loading from './loading'
+import * as commonActions from '../actions/common'
+import * as userActions from '../actions/user'
 
-const { height, width } = Dimensions.get('window');
+const { height, width } = Dimensions.get('window')
 
 
 const mapDispatchToProps = (dispatch) => {
-	return ({
+  return ({
     userActions: bindActionCreators({...userActions}, dispatch),
     commonActions: bindActionCreators({...commonActions}, dispatch)
-	});
+  })
 }
 
 const mapStateToProps = (state) => {
-	return ({
+  return ({
     authedUser: state.user.authedUser,
     loading: state.common.loading,
     label: state.common.label,
-	});
+  })
 }
 
 
 
 class Dashboard extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       data: [ 50, 10, 40, 95, -4, -24, 85, 91, 35, 53, -53, 24, 50, -20, -80, 50, 10, 40, 95, -4, -24, 85, 91, 35, 53, -53, 24, 50, -20, -80 ]
     }
-    this.onScrollEvent = this.onScrollEvent.bind(this);
+    this.onScrollEvent = this.onScrollEvent.bind(this)
   }
 
   onScrollEvent() {
-    let temp = [];
+    let temp = []
     for (let i = 0; i < 30; i += 1) {
-      temp.push(Math.random() % 100);
+      temp.push(Math.random() % 100)
     }
-    this.setState({ data: temp });
+    this.setState({ data: temp })
   }
 
 
@@ -55,11 +55,11 @@ class Dashboard extends React.Component {
     if (this.props.loading) {
       return (
         <Loading label={this.props.label} />
-      );
+      )
     }
 
-    const fill = 'rgb(134, 65, 244)';
-    const data =  this.state.data;
+    const fill = 'rgb(134, 65, 244)'
+    const data =  this.state.data
 
     return (
 
@@ -161,7 +161,7 @@ class Dashboard extends React.Component {
         </View>
 
       </View>
-    );
+    )
 
   }
 
@@ -193,8 +193,8 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#00e0ff',
   }
-});
+})
 
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
+export default connect(mapStateToProps, mapDispatchToProps)(Dashboard)

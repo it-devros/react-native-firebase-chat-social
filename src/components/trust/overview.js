@@ -1,29 +1,29 @@
-import React from 'react';
-import { StyleSheet, Text, View, ImageBackground, TextInput, Image, TouchableOpacity, Dimensions, TouchableWithoutFeedback, Keyboard, ScrollView } from 'react-native';
-import { Button } from 'react-native-elements';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import { Switch } from 'react-native-switch';
+import React from 'react'
+import { StyleSheet, Text, View, ImageBackground, TextInput, Image, TouchableOpacity, Dimensions, TouchableWithoutFeedback, Keyboard, ScrollView } from 'react-native'
+import { Button } from 'react-native-elements'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import { Switch } from 'react-native-switch'
 
-import Footer from '../footer';
-import Header from '../header';
+import Footer from '../footer'
+import Header from '../header'
 
-const { height, width } = Dimensions.get('window');
+const { height, width } = Dimensions.get('window')
 
 
 const mapDispatchToProps = (dispatch) => {
-	return ({
-	});
+  return ({
+  })
 }
 
 const mapStateToProps = (state) => {
-	return ({
-	});
+  return ({
+  })
 }
 
 class TrustOverview extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
     }
   }
@@ -95,7 +95,7 @@ class TrustOverview extends React.Component {
 
       </View>
 
-    );
+    )
 
   }
 
@@ -139,8 +139,8 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     fontSize: 14
   }
-});
+})
 
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(TrustOverview);
+export default connect(mapStateToProps, mapDispatchToProps)(TrustOverview)

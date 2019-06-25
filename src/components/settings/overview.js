@@ -1,38 +1,38 @@
-import React from 'react';
-import { StyleSheet, Text, View, ImageBackground, TextInput, Image, TouchableOpacity, Dimensions, TouchableWithoutFeedback, Keyboard, ScrollView } from 'react-native';
-import { Button } from 'react-native-elements';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import { Switch } from 'react-native-switch';
+import React from 'react'
+import { StyleSheet, Text, View, ImageBackground, TextInput, Image, TouchableOpacity, Dimensions, TouchableWithoutFeedback, Keyboard, ScrollView } from 'react-native'
+import { Button } from 'react-native-elements'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import { Switch } from 'react-native-switch'
 
-import Footer from '../footer';
-import Header from '../header';
+import Footer from '../footer'
+import Header from '../header'
 
-const { height, width } = Dimensions.get('window');
+const { height, width } = Dimensions.get('window')
 
 
 const mapDispatchToProps = (dispatch) => {
-	return ({
-	});
+  return ({
+  })
 }
 
 const mapStateToProps = (state) => {
-	return ({
-	});
+  return ({
+  })
 }
 
 class SettingsOverview extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       notifySwitch: true,
     }
 
-    this.onChangeNotify = this.onChangeNotify.bind(this);
+    this.onChangeNotify = this.onChangeNotify.bind(this)
   }
 
   onChangeNotify(val) {
-    this.setState({ notifySwitch: val });
+    this.setState({ notifySwitch: val })
   }
 
   render() {
@@ -63,7 +63,7 @@ class SettingsOverview extends React.Component {
 
       </View>
 
-    );
+    )
 
   }
 
@@ -89,8 +89,8 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'flex-end'
   }
-});
+})
 
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(SettingsOverview);
+export default connect(mapStateToProps, mapDispatchToProps)(SettingsOverview)

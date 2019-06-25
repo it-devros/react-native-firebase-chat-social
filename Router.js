@@ -1,29 +1,29 @@
-import React from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import { StackNavigator } from 'react-navigation';
+import React from 'react'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import { StackNavigator } from 'react-navigation'
 
 
-import Login from './src/components/auth/login';
-import SignUp from './src/components/auth/signup';
-import WelcomeNew from './src/components/auth/welcomeNew';
+import Login from './src/components/auth/login'
+import SignUp from './src/components/auth/signup'
+import WelcomeNew from './src/components/auth/welcomeNew'
 
-import WelcomeScreen from './src/components/welcomeScreen';
-import Dashboard from './src/components/dashboard';
-import GeneralMenu from './src/components/generalMenu';
+import WelcomeScreen from './src/components/welcomeScreen'
+import Dashboard from './src/components/dashboard'
+import GeneralMenu from './src/components/generalMenu'
 
-import ContactList from './src/components/contact/contactList';
-import ChatWindow from './src/components/contact/chat';
+import ContactList from './src/components/contact/contactList'
+import ChatWindow from './src/components/contact/chat'
 
-import ProfileOverview from './src/components/profile/overview';
+import ProfileOverview from './src/components/profile/overview'
 
-import SettingsOverview from './src/components/settings/overview';
+import SettingsOverview from './src/components/settings/overview'
 
-import ActivityList from './src/components/activity/activityList';
-import Activity from './src/components/activity/activity';
+import ActivityList from './src/components/activity/activityList'
+import Activity from './src/components/activity/activity'
 
 
-import TrustOverview from './src/components/trust/overview';
+import TrustOverview from './src/components/trust/overview'
 
 
 const AuthStack = StackNavigator({
@@ -32,52 +32,52 @@ const AuthStack = StackNavigator({
   WelcomeNew: { screen: WelcomeNew }
 }, {
   headerMode: 'none',
-});
+})
 
 const ContactStack = StackNavigator({
   ContactList: { screen: ContactList },
   ChatWindow: { screen: ChatWindow }
 }, {
   headerMode: 'none',
-});
+})
 
 const DashboardStack = StackNavigator({
   Dashboard: { screen: Dashboard }
 }, {
   headerMode: 'none',
-});
+})
 
 const ProfileStack = StackNavigator({
   ProfileOverview: { screen: ProfileOverview }
 }, {
   headerMode: 'none',
-});
+})
 
 const SettingStack = StackNavigator({
   SettingsOverview: { screen: SettingsOverview }
 }, {
   headerMode: 'none'
-});
+})
 
 const ActivityStack = StackNavigator({
   ActivityList: { screen: ActivityList },
   Activity: { screen: Activity }
 }, {
   headerMode: 'none'
-});
+})
 
 
 const TrustStack = StackNavigator({
   TrustOverview: { screen: TrustOverview }
 }, {
   headerMode: 'none'
-});
+})
 
 const MenuStack = StackNavigator({
   Menu: { screen: GeneralMenu }
 }, {
   headerMode: 'none',
-});
+})
 
 const AppNavigator = StackNavigator({
   WelcomeScreen: { screen: WelcomeScreen },
@@ -92,22 +92,22 @@ const AppNavigator = StackNavigator({
 }, {
     mode: 'modal',
     headerMode: 'none',
-});
+})
 
 
 
 const mapDispatchToProps = (dispatch) => {
-	return ({
-	});
+  return ({
+  })
 }
 
 const mapStateToProps = (state) => {
-	return ({
+  return ({
     authedUser: state.user.authedUser,
     is_authed: state.user.is_authed,
     loading: state.common.loading,
     label: state.common.label,
-	});
+  })
 }
 
 
@@ -115,7 +115,7 @@ const mapStateToProps = (state) => {
 
 class Router extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
 
     }
@@ -124,11 +124,11 @@ class Router extends React.Component {
   render() {
     return (
       <AppNavigator />
-    );
+    )
   }
 
 }
 
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Router);
+export default connect(mapStateToProps, mapDispatchToProps)(Router)
